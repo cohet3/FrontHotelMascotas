@@ -1,0 +1,9 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    background-color: #5999da; /* Cambia el color de fondo según tus preferencias */
+    }
