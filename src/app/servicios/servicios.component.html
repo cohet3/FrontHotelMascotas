@@ -1,1 +1,20 @@
-<p>servicios works!</p>
+<h1>Servicios desde el back</h1>
+<table>
+    <caption>Servicios disponibles</caption>
+    <tr>
+        <th>IdServicio</th>
+        <th>concepto</th>
+        <th>precio</th>
+     
+    </tr>
+    @for(elemento of servicios; track elemento.idServicio){
+        <tr>
+            <td>{{elemento.idServicio}}</td>
+            
+            <td>{{elemento.concepto}}</td>
+            
+            <td>{{elemento.precio}}</td>
+            
+        </tr>
+    }
+</table>
