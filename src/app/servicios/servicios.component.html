@@ -1,20 +1,11 @@
-<h1>Servicios desde el back</h1>
-<table>
-    <caption>Servicios disponibles</caption>
-    <tr>
-        <th>IdServicio</th>
-        <th>concepto</th>
-        <th>precio</th>
-     
-    </tr>
-    @for(elemento of servicios; track elemento.idServicio){
-        <tr>
-            <td>{{elemento.idServicio}}</td>
-            
-            <td>{{elemento.concepto}}</td>
-            
-            <td>{{elemento.precio}}</td>
-            
-        </tr>
-    }
-</table>
+<h1>Servicios disponibles</h1>
+
+<div class="servicios-grid">
+    <div *ngFor="let servicio of servicios; trackBy: trackByFn" class="servicio-card">
+      <img src="{{ servicio.imagen }}" alt="{{ servicio.concepto }}">
+      <h3>{{ servicio.concepto }}</h3>
+      <p>{{ servicio.descripcion }}</p>
+      <p>Precio: {{ servicio.precio }} €</p>
+    </div>
+  </div>
+
