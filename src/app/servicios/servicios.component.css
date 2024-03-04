@@ -1,0 +1,32 @@
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .servicio-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .servicio-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+ 
+  }
+  
+  .servicio-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .servicio-card p {
+    margin-bottom: 5px;
+  }
+  
+  .servicio-card p:last-child {
+    margin-bottom: 0;
+  }
+  

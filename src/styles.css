@@ -1,1 +1,87 @@
 /* You can add global styles to this file, and also import other style files */
+/* estilos generales para resposive */
+/* Estilos generales */
+
+/* Aplicar un box-sizing: border-box a todos los elementos */
+/* Estilos generales */
+body {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    color: #333333;
+  }
+  
+  h1, h2, h3 {
+    font-weight: bold;
+  }
+  
+  a {
+    color: #0073b7;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  /* Encabezado */
+  header {
+    background-color: #0073b7;
+    color: #ffffff;
+    padding: 10px;
+  }
+  
+  /* Contenido principal */
+  .content {
+    padding: 20px;
+  }
+  
+  /* Barra lateral */
+  .sidebar {
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  /* Pie de página */
+  footer {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Formularios */
+  .form-control {
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .form-control:focus {
+    border-color: #0073b7;
+  }
+  
+  .btn {
+    background-color: #0073b7;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #ff9800;
+  }
+  
+  /* Media queries */
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+  }
+  
