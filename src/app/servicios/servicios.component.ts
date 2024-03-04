@@ -11,15 +11,18 @@ import { CommonModule } from '@angular/common';
   styleUrl: './servicios.component.css'
 })
 export class ServiciosComponent implements OnInit {
+
   constructor(private servicio: ServicioService) { }
+  
   servicios: Servicio[] =[];
+
   ngOnInit(): void {
     this.servicio.listar().subscribe(datos=>this.servicios=datos);
     
   }
-
+  //suprimir al quitar el *ngFor
   trackByFn(index: number, item: any): any {
-    return item.idServicio; // Reemplaza 'id' por la propiedad única de tu modelo
+    return item.idServicio; 
   }
 
 }

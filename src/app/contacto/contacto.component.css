@@ -1,0 +1,14 @@
+h1, p, h2 {
+    text-align: center;
+  }
+.contenedor-formulario {
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+  }
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+  }
