@@ -8,5 +8,4 @@ import { Component } from '@angular/core';
   styleUrl: './galeria-fotos.component.css'
 })
 export class GaleriaFotosComponent {
-
 }
