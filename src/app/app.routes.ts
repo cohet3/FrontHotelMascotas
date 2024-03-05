@@ -16,7 +16,7 @@ export const routes: Routes = [
     {path:"contacto",component:ContactoComponent},
     {path:"galeria-fotos", component : GaleriaFotosComponent},
     {path:"opiniones", component:OpinionesComponent},
-    {path:"quines-somos",component:QuinesSomosComponent},
+    {path:"quienes-somos",component:QuinesSomosComponent},
     {path:"reserva-habitacion", component: ReservaHabitacionComponent},
     {path:'servicios', component:ServiciosComponent},
     {path:"ubicacion",component:UbicacionComponent},
