@@ -11,7 +11,12 @@ import { Router } from '@angular/router';
 export class ReservaHabitacionComponent {
   constructor(private router: Router) {}
   redirecionar() {
-    this.router.navigate(['alta-cliente']);
+    this.router.navigate(['alta-mascota']);
+    
   }
+  redirecionar2() {
+  this.router.navigate(['alta-cliente']);
+  
 
+}
 }
