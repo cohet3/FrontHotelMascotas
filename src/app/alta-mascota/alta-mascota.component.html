@@ -1,0 +1,21 @@
+<h1>Alta mascota</h1>
+
+<div>
+    
+
+   <label>Nombre mascota: </label>
+   <input type="text" [(ngModel)]="m1.nombreMascota" placeholder="Escriba su nombre">
+   <br>
+   <label>idMascota :</label>
+   <input type="text" [(ngModel)]="m1.idMascota"placeholder="Escriba el id de su mascota">
+   <br>
+   <label>Raza :</label>
+   <input type="text" [(ngModel)]="m1.raza">
+   <br>
+   <label>Edad:</label>
+   <input type="text" [(ngModel)]="m1.edad">
+   <br>
+   <label>Tamano :</label>
+   <input type="text" [(ngModel)]="m1.tamano">
+   <br>
+   <button (click)="altaMascota()">Dar de alta</button>

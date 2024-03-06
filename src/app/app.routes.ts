@@ -8,9 +8,12 @@ import { QuinesSomosComponent } from './quines-somos/quines-somos.component';
 import { ReservaHabitacionComponent } from './reserva-habitacion/reserva-habitacion.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { UbicacionComponent } from './ubicacion/ubicacion.component';
+import { AltaMascotaComponent } from './alta-mascota/alta-mascota.component';
+
 
 export const routes: Routes = [
     {path:"inicio", component:InicioComponent},
+    {path:"alta-mascota",component:AltaMascotaComponent},
     {path:"cliente", component:ClienteComponent},
     {path:"", redirectTo: "/inicio", pathMatch:"full"},
     {path:"contacto",component:ContactoComponent},

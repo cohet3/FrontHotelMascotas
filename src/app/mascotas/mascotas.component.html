@@ -1,2 +1,24 @@
-<p>mascotas works!</p>
-
+<h1>Mascotas desde el back</h1>
+<table>
+    <caption>
+         mascotas
+    </caption>
+    <tr>
+        <th>idMascota</th>
+        <th>nombre</th>
+        <th>raza</th>
+        <th>tamano</th>
+        <th>edad</th>
+    </tr>
+    @for (elemento of mascotas; track elemento.idMascota) {
+        <tr>
+            <td>{{elemento.idMascota}}</td>
+            <td>{{elemento.nombreMascota}}</td>
+            <td>{{elemento.raza}}</td>
+            <td>{{elemento.tamano}}</td>
+            <td>{{elemento.edad}}</td>
+        </tr>
+    }
+</table>
+<button routerLink="alta">Alta de una nuevo mascota</button>
+</app-alta-mascota>
