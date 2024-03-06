@@ -1,0 +1,14 @@
+<h1>Alta Cliente</h1>
+
+<div>
+<label>Nombre del Cliente: </label>
+<input type="text" [(ngModel)]="c1.nombre" placeholder="Escriba su nombre y apellidos">
+<br>
+<label>Dirección: </label>
+<input type="text" [(ngModel)]="c1.direccion" placeholder="Escriba su dirección" >
+<br>
+<label>Teléfono: </label>
+<input type="text" [(ngModel)]="c1.telefono" placeholder="Escriba su Teléfono">
+<br>
+<button (click)="altaCliente()">Dar de alta</button>
+</div>

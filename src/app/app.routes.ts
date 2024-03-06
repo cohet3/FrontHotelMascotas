@@ -8,16 +8,18 @@ import { QuinesSomosComponent } from './quines-somos/quines-somos.component';
 import { ReservaHabitacionComponent } from './reserva-habitacion/reserva-habitacion.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { UbicacionComponent } from './ubicacion/ubicacion.component';
+import { AltaClienteComponent } from './alta-cliente/alta-cliente.component';
 
 export const routes: Routes = [
-    {path:"inicio", component:InicioComponent},
-    {path:"cliente", component:ClienteComponent},
-    {path:"", redirectTo: "/inicio", pathMatch:"full"},
-    {path:"contacto",component:ContactoComponent},
-    {path:"galeria-fotos", component : GaleriaFotosComponent},
-    {path:"opiniones", component:OpinionesComponent},
-    {path:"quienes-somos",component:QuinesSomosComponent},
-    {path:"reserva-habitacion", component: ReservaHabitacionComponent},
-    {path:'servicios', component:ServiciosComponent},
-    {path:"ubicacion",component:UbicacionComponent},
+{path: 'cliente', component:ClienteComponent},
+{path: 'alta-cliente', component:AltaClienteComponent},
+{path:"inicio", component:InicioComponent},
+{path:"", redirectTo: "/inicio", pathMatch:"full"},
+{path:"contacto",component:ContactoComponent},
+{path:"galeria-fotos", component : GaleriaFotosComponent},
+{path:"opiniones", component:OpinionesComponent},
+{path:"quienes-somos",component:QuinesSomosComponent},
+{path:"reserva-habitacion", component: ReservaHabitacionComponent},
+{path:'servicios', component:ServiciosComponent},
+{path:"ubicacion",component:UbicacionComponent},
 ];
