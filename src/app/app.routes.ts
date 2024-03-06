@@ -9,11 +9,13 @@ import { ReservaHabitacionComponent } from './reserva-habitacion/reserva-habitac
 import { ServiciosComponent } from './servicios/servicios.component';
 import { UbicacionComponent } from './ubicacion/ubicacion.component';
 import { AltaMascotaComponent } from './alta-mascota/alta-mascota.component';
+import { AltaClienteComponent } from './alta-cliente/alta-cliente.component';
 
 
 export const routes: Routes = [
     {path:"inicio", component:InicioComponent},
     {path:"alta-mascota",component:AltaMascotaComponent},
+    {path:"alta-cliente",component:AltaClienteComponent},
     {path:"cliente", component:ClienteComponent},
     {path:"", redirectTo: "/inicio", pathMatch:"full"},
     {path:"contacto",component:ContactoComponent},
@@ -23,4 +25,7 @@ export const routes: Routes = [
     {path:"reserva-habitacion", component: ReservaHabitacionComponent},
     {path:'servicios', component:ServiciosComponent},
     {path:"ubicacion",component:UbicacionComponent},
+
 ];
+
+

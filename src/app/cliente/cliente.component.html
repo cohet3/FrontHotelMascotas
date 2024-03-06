@@ -1,1 +1,21 @@
-<p>cliente works!</p>
+<h1>Clientes desde el back</h1>
+<table>
+<caption>Clientes</caption>
+<tr>
+<th>IdCliente</th>
+<th>Nombre</th>
+<th>Dirección</th>
+<th>Teléfono</th>
+</tr>
+@for(elemento of clientes; track elemento. idCliente){
+<tr>
+    <td>{{elemento.idCliente}}</td>
+    <td>{{elemento.nombre}}</td>
+    <td>{{elemento.direccion}}</td>
+    <td>{{elemento.telefono}}</td>
+</tr>
+
+}
+</table>
+<button routerLink="alta">Dar de alta Cliente</button>
+<app-alta-cliente></app-alta-cliente>

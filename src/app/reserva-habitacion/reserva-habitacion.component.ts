@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reserva-habitacion',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './reserva-habitacion.component.css'
 })
 export class ReservaHabitacionComponent {
+  constructor(private router: Router) {}
+  redirecionar() {
+    this.router.navigate(['alta-cliente']);
+  }
 
 }
