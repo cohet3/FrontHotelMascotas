@@ -4,7 +4,7 @@
     
 
    <label>Nombre mascota: </label>
-   <input type="text" [(ngModel)]="m1.nombreMascota" placeholder="Escriba su nombre">
+   <input type="text" [(ngModel)]="m1.nombre" placeholder="Escriba su nombre">
    <br>
    <label>idMascota :</label>
    <input type="text" [(ngModel)]="m1.idMascota"placeholder="Escriba el id de su mascota">
@@ -18,4 +18,6 @@
    <label>Tamano :</label>
    <input type="text" [(ngModel)]="m1.tamano">
    <br>
+   <label>tipoHabitacion :</label>
+   <input type="text" [(ngModel)]="m1.tipoHabitacion">
    <button (click)="altaMascota()">Dar de alta</button>
