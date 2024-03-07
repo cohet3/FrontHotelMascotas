@@ -1,3 +1,27 @@
+body {
+  background-color: #DBCC95;
+  margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+
+.hamburguesa{
+  width: 500px; /* Ajusta el ancho a tu gusto */
+  margin: left; /* Centra la caja */
+  padding: 20px;
+}
+h5 {
+  color: #291d09;
+  size: 20;
+}
+
+li a {
+  color: #291d09;
+}
+
 h1 {
     text-align: center;
   }
@@ -5,14 +29,5 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 10%;
+    width: 20%;
   }
-body{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30vh;
-    background-color: #5999da; /* Cambia el color de fondo según tus preferencias */
-    }

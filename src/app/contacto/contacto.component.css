@@ -1,14 +1,53 @@
-h1, p, h2 {
-    text-align: center;
-  }
+body {
+  background-color: #EAECCC;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Tahoma, Geneva, Verdana, sans-serif;
+  
 .contenedor-formulario {
-    margin: 0 auto;
-    width: 50%;
+  margin: 0 auto; /* Centrado */
+  width: 50%; /* Ancho máximo */
+  border: 1px solid #4c3610; /* Borde */
+  padding: 20px; /* Relleno */
+  text-align: center; /* Alineación del texto */
+  color: #291d09; /* Color del texto */
+}
+
+ h2 {
+  text-align: center;
+}
+  p{
     text-align: center;
   }
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  background-color: #DBCC95;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #4c3610;
+}
+button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: 1px solid #4c3610;
+  background-color: #291d09;
+  color: #DBCC95;
+  cursor: pointer;
+}
+.mensaje {
+  text-align: center;
+  margin-top: 10px;
+}
+
+
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 15%;
+    width: 20%;
   }
+}
