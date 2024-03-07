@@ -1,7 +1,9 @@
 export interface Mascota{
     idMascota: number,
-    nombreMascota: string,
+    nombre: string,
     raza: string,
     edad:number,
     tamano: string
+    tipoHabitacion: string ,
+    idCliente:number
   }

@@ -18,10 +18,13 @@ export class AltaMascotaComponent {
   m1:Mascota={
 
     "idMascota":0,
-    "nombreMascota":"",
+    "nombre":"",
     "raza":"",
     "edad":0,
-    "tamano":""}
+    "tamano":"",
+    "tipoHabitacion":"",
+    "idCliente":1
+  }
 
    constructor(private servicio: MascotaService,
     private route: ActivatedRoute,
