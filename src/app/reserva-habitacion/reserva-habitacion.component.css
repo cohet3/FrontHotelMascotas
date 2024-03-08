@@ -1,3 +1,14 @@
+body {
+  background-color: #DBCC95;
+}
+button {
+  margin-top: 10px; /* Margen superior del botón */
+  padding: 5px 10px; /* Relleno del botón */
+  border: 1px solid #4c3610; /* Borde del botón */
+  background-color: #291d09; /* Color de fondo del botón */
+  color: #DBCC95; /* Color del texto del botón */
+  cursor: pointer; /* Cursor del botón */
+}
 img {
     display: block;
     margin-left: auto;

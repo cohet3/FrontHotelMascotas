@@ -1,20 +1,23 @@
-<h1>Alta mascota</h1>
+<body>
+<h2>Alta mascota</h2>
 
-<div>
-    
-
-   <label>Nombre mascota: </label>
+<div class="alta-formulario">
+    <label>Nombre mascota: </label>
    <input type="text" [(ngModel)]="m1.nombre" placeholder="Escriba su nombre">
    <br>
    <label>Raza :</label>
-   <input type="text" [(ngModel)]="m1.raza">
+   <input type="text" [(ngModel)]="m1.raza" placeholder="Escriba la raza de su mascota">
    <br>
    <label>Edad:</label>
-   <input type="text" [(ngModel)]="m1.edad">
+   <input type="number" class="selector" [(ngModel)]="m1.edad" min="0" max="20">
    <br>
    <label>Tamano :</label>
-   <input type="text" [(ngModel)]="m1.tamano">
+   <input type="text" [(ngModel)]="m1.tamano" placeholder="Grande-Mediano-Pequeño">
    <br>
-   <label>tipoHabitacion :</label>
-   <input type="text" [(ngModel)]="m1.tipoHabitacion">
+   <label for="tipoHabitacion">¿Qué tipo de habitación deseas?</label>
+   <select [(ngModel)]="m1.tipoHabitacion" id="tipoHabitacion">
+     <option value="perro">Perro</option>
+     <option value="gato">Gato</option>
+   </select>
+   <br>
    <button (click)="altaMascota()">Dar de alta</button>
