@@ -10,12 +10,14 @@ import { ServiciosComponent } from './servicios/servicios.component';
 import { UbicacionComponent } from './ubicacion/ubicacion.component';
 import { AltaMascotaComponent } from './alta-mascota/alta-mascota.component';
 import { AltaClienteComponent } from './alta-cliente/alta-cliente.component';
+import { AltaReservaComponent } from './alta-reserva/alta-reserva.component';
 
 
 export const routes: Routes = [
     {path:"inicio", component:InicioComponent},
     {path:"alta-mascota",component:AltaMascotaComponent},
     {path:"alta-cliente",component:AltaClienteComponent},
+    {path:"alta-reserva",component:AltaReservaComponent},
     {path:"cliente", component:ClienteComponent},
     {path:"", redirectTo: "/inicio", pathMatch:"full"},
     {path:"contacto",component:ContactoComponent},

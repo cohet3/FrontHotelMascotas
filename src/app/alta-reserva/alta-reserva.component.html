@@ -1,1 +1,23 @@
-<p>alta-reserva works!</p>
+<h1>Alta Reserva</h1>
+
+<div>
+    
+
+   <label>Numero de Reserva: </label>
+   <input type="text" [(ngModel)]="r1.idReserva" placeholder="Escriba su nombre">
+   <br>
+   <label>Fecha de Entrada :</label>
+   <input type="text" [(ngModel)]="r1.fechaEntrada">
+   <br>
+   <label>Fecha de Salida:</label>
+   <input type="text" [(ngModel)]="r1.fechaSalida">
+   <br>
+   <label>Precio :</label>
+   <input type="text" [(ngModel)]="r1.precio">
+   <br>
+   <label>Numero de Habitacion :</label>
+   <input type="text" [(ngModel)]="r1.idHabitacion">
+   <br>
+   <label>tipo de Habitacion :</label>
+   <input type="text" [(ngModel)]="r1.tipoHabitacion">
+   <button (click)="altaReserva()">Dar de alta</button>
