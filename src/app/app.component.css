@@ -7,27 +7,18 @@ body {
     align-items: center;
     height: 30vh;
 }
-
-.hamburguesa{
-  width: 500px; /* Ajusta el ancho a tu gusto */
-  margin: left; /* Centra la caja */
-  padding: 20px;
-}
-h5 {
-  color: #291d09;
-  size: 20;
-}
-
-li a {
-  color: #291d09;
-}
-
-h1 {
-    text-align: center;
-  }
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 20%;
   }
+.hamburguesa{
+  width: 500px;
+  margin: left; 
+  padding: 20px;
+}
+li a {
+  color: #291d09;
+}
+
