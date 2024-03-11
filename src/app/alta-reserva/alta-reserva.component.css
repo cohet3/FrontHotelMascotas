@@ -1,0 +1,32 @@
+body {
+    background-color: #DBCC95;
+  }
+  h2 {
+    text-align: center;
+}
+  .calendario-alta {
+    margin: 0 auto; /* Centrado horizontal */
+    width: 50%; /* Ancho máximo */
+    border: 1px solid #4c3610; /* Borde */
+    padding: 20px; /* Relleno */
+    text-align: center; /* Alineación del texto */
+    color: #291d09; /* Color del texto */
+    background-color: #DBCC95;
+  }
+  
+  input, textarea {
+    background-color: #EAECCC;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #4c3610;
+  }
+  
+  button {
+    margin-top: 10px; /* Margen superior del botón */
+    padding: 5px 10px; /* Relleno del botón */
+    border: 1px solid #4c3610; /* Borde del botón */
+    background-color: #291d09; /* Color de fondo del botón */
+    color: #DBCC95; /* Color del texto del botón */
+    cursor: pointer; /* Cursor del botón */
+  }
