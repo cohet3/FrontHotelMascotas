@@ -14,10 +14,14 @@ body {
       width: 20%;
     }
   .hamburguesa{
-    width: 500px;
+    width: 250px;
     margin: left; 
     padding: 20px;
   }
+
   li a {
     color: #291d09;
+  }
+  h5{
+    color:#382709;
   }

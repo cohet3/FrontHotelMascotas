@@ -4,7 +4,7 @@ import { NavigationEnd, Router, RouterLinkActive } from '@angular/router';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLinkActive],
+  imports: [],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })

@@ -9,12 +9,13 @@ import { AltaReservaComponent } from './alta-reserva/alta-reserva.component';
 import { ReservaHabitacionComponent } from './reserva-habitacion/reserva-habitacion.component';
 import { HeaderComponent } from './header/header.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,RouterModule, ServiciosComponent,AltaMascotaComponent,AltaClienteComponent,ClienteComponent,MascotasComponent,AltaReservaComponent,ReservaHabitacionComponent,HeaderComponent,InicioComponent],
+  imports: [RouterOutlet,RouterModule,FooterComponent, ServiciosComponent,AltaMascotaComponent,AltaClienteComponent,ClienteComponent,MascotasComponent,AltaReservaComponent,ReservaHabitacionComponent,HeaderComponent,InicioComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
