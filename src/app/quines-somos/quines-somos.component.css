@@ -1,7 +1,26 @@
+body{
+  background-color: #DBCC95
+  
+}
+h2{
+  text-align: center;
+}
+
+.card {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EAECCC;
+}
+button {
+    background-color: #CD8D7A;
+  }
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 45%;
   }
+   
   
