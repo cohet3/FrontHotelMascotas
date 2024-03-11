@@ -1,0 +1,23 @@
+body {
+    background-color: #DBCC95;
+    margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30vh;
+  }
+  img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 20%;
+    }
+  .hamburguesa{
+    width: 500px;
+    margin: left; 
+    padding: 20px;
+  }
+  li a {
+    color: #291d09;
+  }
