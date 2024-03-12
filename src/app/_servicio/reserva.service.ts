@@ -8,7 +8,7 @@ import { HttpClient } from "@angular/common/http";
   })
   export class ReservaService {
   
-    private url = 'http://localhost:8080/reservas/fechaEntrada#/fechaSalida#';
+    private url = 'http://localhost:8080/reservas';
     reservaCambio = new Subject<Reserva[]>();
   
     listar(): Observable<Reserva[]>{
@@ -20,6 +20,9 @@ import { HttpClient } from "@angular/common/http";
     }
   
     constructor(private http:HttpClient) {}
+    buscarFecha(f1: string, f2: string){
+      return this.http.get<Reserva[]>(`http://localhost:8080/reservas/$(f1)/$(f2)`);
+    }
 
     consultarDisponibilidad(fechaEntrada: Date, fechaSalida: Date): Observable<any> {
       const params = new URLSearchParams();
