@@ -1,7 +1,7 @@
 export interface Reserva{
     "idReserva": number
-    "fechaEntrada":any 
-    "fechaSalida":any
+    "fechaEntrada":Date 
+    "fechaSalida":Date
     "precio":number
     "idHabitacion":number
     "tipoHabitacion":string
