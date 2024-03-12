@@ -12,6 +12,8 @@ import { AltaMascotaComponent } from './alta-mascota/alta-mascota.component';
 import { AltaClienteComponent } from './alta-cliente/alta-cliente.component';
 import { AltaReservaComponent } from './alta-reserva/alta-reserva.component';
 import { HeaderComponent } from './header/header.component';
+import { FacturaComponent } from './factura/factura.component';
+import { DetalleFacturaComponent } from './detalle-factura/detalle-factura.component';
 
 
 export const routes: Routes = [
@@ -19,7 +21,10 @@ export const routes: Routes = [
     {path:"alta-mascota",component:AltaMascotaComponent},
     {path:"alta-cliente",component:AltaClienteComponent},
     {path:"alta-reserva",component:AltaReservaComponent},
+    {path:"factura",component:FacturaComponent},
+    {path:"detalle-factura",component:DetalleFacturaComponent},
     {path:"cliente", component:ClienteComponent},
+    {path:"cliente-factura",component:FacturaComponent},
     {path:"", redirectTo: "/inicio", pathMatch:"full"},
     {path:"contacto",component:ContactoComponent},
     {path:"galeria-fotos", component : GaleriaFotosComponent},

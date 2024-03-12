@@ -19,4 +19,8 @@ alta(c1:Cliente): Observable<Cliente> {
     return this.http.post<Cliente>(this.url,c1);
   }
   constructor(private http:HttpClient) { }
+
+  listar1(id:number):Observable<Cliente>{
+    return this.http.get<Cliente>(`${this.url}/${id}`);
+  }
 }

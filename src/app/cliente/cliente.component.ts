@@ -4,6 +4,7 @@ import { ClienteService } from '../_servicio/cliente.service';
 import { Cliente } from '../_modelo/cliente';
 import { AltaClienteComponent } from '../alta-cliente/alta-cliente.component';
 import { RouterModule } from '@angular/router';
+import { Factura } from '../_modelo/factura';
 
 @Component({
   selector: 'app-cliente',
@@ -15,6 +16,7 @@ import { RouterModule } from '@angular/router';
 export class ClienteComponent implements OnInit  {
   constructor(private servicio:ClienteService){}
   clientes:Cliente[] = [];
+  
   
       ngOnInit(): void {
         this.servicio.clienteCambio.subscribe(
