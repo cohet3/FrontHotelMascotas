@@ -12,12 +12,10 @@ import { ReservaService } from '../_servicio/reserva.service';
   styleUrl: './alta-reserva.component.css'
 })
 export class AltaReservaComponent {
-  
-
   r1: Reserva={
     "idReserva":0,
-    "fechaEntrada":"",
-    "fechaSalida":"",
+    "fechaEntrada": new Date('2024-02-29'),
+    "fechaSalida":new Date('2024-03-29'),
     "precio":0,
     "idHabitacion":0,
     "tipoHabitacion":"",

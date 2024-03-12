@@ -8,7 +8,7 @@ import { HttpClient } from "@angular/common/http";
   })
   export class ReservaService {
   
-    private url: string = 'http://localhost:8080/reservas';//conectar intelillnt
+    private url = 'http://localhost:8080/reservas/fechaEntrada#/fechaSalida#';
     reservaCambio = new Subject<Reserva[]>();
   
     listar(): Observable<Reserva[]>{
@@ -20,4 +20,15 @@ import { HttpClient } from "@angular/common/http";
     }
   
     constructor(private http:HttpClient) {}
+
+    consultarDisponibilidad(fechaEntrada: Date, fechaSalida: Date): Observable<any> {
+      const params = new URLSearchParams();
+      params.append('fechaEntrada', fechaEntrada.toISOString());
+      params.append('fechaSalida', fechaSalida.toISOString());
+    
+      let urlConParametros = this.url.replace('{fechaEntrada}', fechaEntrada.toISOString());
+      urlConParametros = urlConParametros.replace('{fechaSalida}', fechaSalida.toISOString());
+    
+      return this.http.get(urlConParametros + '?' + params.toString());
+    }
   }
