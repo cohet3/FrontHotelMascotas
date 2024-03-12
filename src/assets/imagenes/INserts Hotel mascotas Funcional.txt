@@ -1,0 +1,65 @@
+select id_reserva , sum (cantidad_noches*precior) as importeReserva from public.reservas_mascotas_habitaciones  ,
+select id_servicio ,sum  (precios*cantidad) as importeServicios from public.servicios,
+select id_factura,id_cliente from public.facturas,
+	   inner joins public.detalles_facturas
+	   group by id_reserva
+
+
+insert into clientes
+(direccion,nombre,telefono)
+values
+('Madrid','Gabriela Ruiz','666111666'),
+('Colmenar Viejo','Cristina del Castillo','666111555'),
+('Sibiu','Ioan Bobinca','666111444'),
+('Barcelona','Dani Rodas','666111222'),
+('Cadiz','Jose Falete','666111333')
+
+
+insert into public.detalles_facturas
+(concepto,fecha_factura,preciodf,id_factura,id_habitacion,id_reserva,id_mascota,id_servicio)
+values
+('Veterinario','2024-03-25',25,1,6,5,1,1),
+('Paseos','2024-03-26',10,2,7,6,2,2),
+('Peluqueria','2024-03-27',10,3,8,7,3,3),
+('WebCam','2024-03-28',2,4,9,8,4,4)
+
+select * from public.reservas_mascotas_habitaciones
+insert into public.facturas
+values
+(1,1),
+(2,2),
+(3,3),
+(4,4)
+
+insert into public.habitaciones
+(description,tarifa,tipo_habitacion)
+values
+('habitacion para perros',20,'grande'),
+('habitacion para gatos',20,'pequena'),
+('habitacion para perros',20,'grande'),
+('habitacion para gatos',20,'pequena')
+
+select* from public.habitaciones
+
+insert into public.mascotas
+(edad,nombre,raza,tamano,tipo_habitacion,id_cliente)
+values
+(15,'Mimos','Egipcia','pequena','pequena',1),
+(6,'Kalua','Tigre Siberiano','pequena','pequena',2),
+(10,'Rugui','Shar Pei','Grande','Grande',3),
+(2,'Axl','Border Collie','Mediano','Grande',4)
+
+
+INSERT INTO servicios (cantidad,concepto,descripcion,imagen,precios) VALUES
+(1, 'Paseo',  'Paseos de perros que mantienen las colas moviéndose y las patas en marcha! En nuestro servicio de paseo de perros, nos aseguramos de que tu peludo amigo obtenga la dosis perfecta de ejercicio, socialización y diversión este hospredado en nuestro hotel.', 'assets\imagenes\paseo.jpeg',10),
+(1, 'Peluquería', 'Nuestro personal de peluquería de mascotas está entrenado para trabajar con diferentes tipos de animales y razas, utilizando equipos y productos específicos para garantizar el bienestar y la seguridad de las mascotas durante el proceso de arreglo.', 'assets\imagenes\pelucaninacorte.jpg',10),
+(1, 'Web Cam',  'Con nuestra tecnología de vanguardia y atención personalizada, puedes disfrutar de tranquilidad mientras estás lejos de casa, sabiendo que tu mascota está bien cuidada y bajo tu supervisión virtual.', 'assets\imagenes\webcam.jpg',2),
+(1, 'Veterinario',  'Desde chequeos de salud de rutina hasta emergencias inesperadas, estamos aquí para garantizar el bienestar completo de tu amigo peludo. ¡Confía en nosotros para brindarle a tu mascota una experiencia de hotel con atención veterinaria de alta calidad!.', 'assets\imagenes\veterinario.jpeg',30);
+
+insert into public.reservas_mascotas_habitaciones
+(cantidad_noches,fecha_entrada,fecha_salida,precior,id_mascota,id_habitacion)
+values
+(1,'2024-03-10','2024-03-25',20,1,6),
+(1,'2024-03-11','2024-03-26',20,2,7),
+(1,'2024-03-12','2024-03-27',20,3,8),
+(1,'2024-03-13','2024-03-28',20,4,9)

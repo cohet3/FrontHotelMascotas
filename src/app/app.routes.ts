@@ -11,6 +11,7 @@ import { UbicacionComponent } from './ubicacion/ubicacion.component';
 import { AltaMascotaComponent } from './alta-mascota/alta-mascota.component';
 import { AltaClienteComponent } from './alta-cliente/alta-cliente.component';
 import { AltaReservaComponent } from './alta-reserva/alta-reserva.component';
+import { HeaderComponent } from './header/header.component';
 
 
 export const routes: Routes = [
@@ -27,6 +28,7 @@ export const routes: Routes = [
     {path:"reserva-habitacion", component: ReservaHabitacionComponent},
     {path:'servicios', component:ServiciosComponent},
     {path:"ubicacion",component:UbicacionComponent},
+    {path:"header",component:HeaderComponent},
 
 ];
 

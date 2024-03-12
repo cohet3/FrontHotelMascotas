@@ -3,6 +3,7 @@
 <div>
   <input matInput type="date" [(ngModel)]="fechaEntrada" placeholder="Fecha de entrada">
   <input matInput type="date" [(ngModel)]="fechaSalida" placeholder="Fecha de salida">
+
   <button type="submit" (click)="consultarDisponibilidad()">Consultar disponibilidad de fecha</button>
 <!-- 
   <div *ngFor="let resultado of resultados">
@@ -10,6 +11,7 @@
     <p>{{ resultado.disponible ? 'Disponible' : 'No disponible' }}</p>
     <p>{{ resultado.precio }}</p>
   </div> -->
+
 </div>
 
    <!-- <div>
