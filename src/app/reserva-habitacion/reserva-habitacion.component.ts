@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { Servicio } from '../_modelo/servicio';
 import { ReservaService } from '../_servicio/reserva.service';
 import { CommonModule } from '@angular/common';
+import { Reserva } from '../_modelo/reserva';
 
 @Component({
   selector: 'app-reserva-habitacion',
@@ -14,9 +15,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './reserva-habitacion.component.css'
 })
 export class ReservaHabitacionComponent implements OnInit{
-  fechaEntrada: Date = new Date();
-  fechaSalida: Date = new Date();
-  resultados: Date[] = [];
+  fechaEntrada: string = "";
+  fechaSalida: string = "";
+  resultados: Reserva[] = [];
   ngOnInit() {
     // this.resultados = [];
     // this.servicio.getReservas(this.fechaEntrada,this.fechaSalida).subscribe(datos=>this.servicio=datos)
@@ -40,20 +41,17 @@ export class ReservaHabitacionComponent implements OnInit{
 redirecionar3(){
   this.router.navigate(['alta-reserva']);
 }
-consultarDisponibilidad() {
-  if (this.fechaEntrada && this.fechaSalida) {
-    this.servicio.consultarDisponibilidad(this.fechaEntrada, this.fechaSalida)
-      .subscribe(
-        (data) => {
-          this.resultados = data;
-        },
-        (error) => {
-          console.log(error);
-        }
-      );
-  } else {
-    console.error("Please select both arrival and departure dates");
-  }
+
+buscarDisponibilidad() {
+  this.servicio.buscarFecha(this.fechaEntrada, this.fechaSalida)
+    .subscribe(
+      (data) => {
+        this.resultados = data;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
 }
 
 }
