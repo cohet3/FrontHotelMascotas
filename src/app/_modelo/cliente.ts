@@ -6,6 +6,6 @@ export interface Cliente{
     "nombre": string,
     "direccion": string,
     "telefono": string,
-    facturas: Factura [];
-    mascotas : Mascota [];
+    mascotas : Mascota [],
+    facturas: Factura []
 }

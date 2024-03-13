@@ -4,6 +4,7 @@ import { ClienteService } from '../_servicio/cliente.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { FormsModule } from '@angular/forms';
+import { Factura } from '../_modelo/factura';
 
 @Component({
   selector: 'app-alta-cliente',
@@ -17,7 +18,10 @@ export class AltaClienteComponent {
     "idCliente": 0,
     "nombre": "",
     "direccion": "",
-    "telefono": ""}  
+    "telefono": "",
+  mascotas: [],
+facturas: []
+}  
     constructor(private servicio:ClienteService,
       private route: ActivatedRoute,
       private router: Router){}

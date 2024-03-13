@@ -4,6 +4,6 @@ export interface Servicio{
     precio: number,
     descripcion: string,
     imagen: string
-
+    cantidad:number,
 }
 
