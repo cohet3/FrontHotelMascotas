@@ -2,8 +2,8 @@ export interface Servicio{
     idServicio: number,
     concepto: string,
     precio: number,
+    imagen: string,
     descripcion: string,
-    imagen: string
-    cantidad:number,
+    cantidad:number
 }
 

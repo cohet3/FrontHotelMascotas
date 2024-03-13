@@ -15,14 +15,19 @@ import { Reserva } from '../_modelo/reserva';
   styleUrl: './reserva-habitacion.component.css'
 })
 export class ReservaHabitacionComponent implements OnInit{
+  
   fechaEntrada: string = "";
   fechaSalida: string = "";
+        "precioR": number=0;
+        "idMascota": number=0;
+        "cantidadNoches": number=0;
+        "idHabitacion": number=0;
   resultados: Reserva[] = [];
   ngOnInit() {
-    // this.resultados = [];
-    // this.servicio.getReservas(this.fechaEntrada,this.fechaSalida).subscribe(datos=>this.servicio=datos)
-    // console.log(this.resultados)
-    // console.log(this.servicio)
+     this.resultados = [];
+     //this.servicio.getReservas(this.fechaEntrada,this.fechaSalida).subscribe(datos=>this.servicio=datos)
+     console.log(this.resultados)
+    console.log(this.servicio)
     
   }
   constructor(private servicio: ReservaService,private router: Router){}
