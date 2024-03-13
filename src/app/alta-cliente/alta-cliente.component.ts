@@ -18,7 +18,9 @@ export class AltaClienteComponent {
     "idCliente": 0,
     "nombre": "",
     "direccion": "",
-    "telefono": ""}  
+    "telefono": "", 
+    mascotas:[],
+    facturas:[]}
     constructor(private servicio:ClienteService,
       private route: ActivatedRoute,
       private router: Router){}

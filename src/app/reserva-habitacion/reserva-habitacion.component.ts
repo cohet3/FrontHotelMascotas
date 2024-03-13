@@ -20,9 +20,9 @@ export class ReservaHabitacionComponent implements OnInit{
   resultados: Reserva[] = [];
   ngOnInit() {
      this.resultados = [];
-     this.servicio.getReservas(this.fechaEntrada,this.fechaSalida).subscribe(data=>this.servicio=datos)
-     console.log(this.resultados)
-     console.log(this.servicio)
+     //this.servicio.getReservas(this.fechaEntrada,this.fechaSalida).subscribe(data=>this.servicio=datos)
+    // console.log(this.resultados)
+    // console.log(this.servicio)
     
   }
   //constructor(private servicio: ReservaService,private router: Router){}
@@ -30,27 +30,27 @@ export class ReservaHabitacionComponent implements OnInit{
     //this.servicio.getReservas(this.fechaEntrada,this.fechaSalida).subscribe(datos=>this.servicio=datos);
    
    }
-  redirecionar() {
-    this.router.navigate(['alta-mascota']);
+  //redirecionar() {
+    //this.router.navigate(['alta-mascota']);
     
-  }
-  redirecionar2() {
-  this.router.navigate(['alta-cliente']);
+  //}
+ // redirecionar2() {
+  //this.router.navigate(['alta-cliente']);
   
-}
-redirecionar3(){
-  this.router.navigate(['alta-reserva']);
-}
+//}
+//redirecionar3(){
+ // this.router.navigate(['alta-reserva']);
+//}
 
-buscarDisponibilidad() {
-  this.servicio.buscarFecha(this.fechaEntrada, this.fechaSalida)
-    .subscribe(
-      (data) => {
-        this.resultados = data;
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-}
+//buscarDisponibilidad() {
+  //this.servicio.buscarFecha(this.fechaEntrada, this.fechaSalida)
+    //.//subscribe(
+     // (data) => {
+       // this.resultados = data;
+      //},
+      //(error) => {
+       // console.log(error);
+      //}
+    //);
+//}
 
