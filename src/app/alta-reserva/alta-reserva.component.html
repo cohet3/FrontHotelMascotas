@@ -1,8 +1,6 @@
 <h1>Alta Reserva</h1>
 
 <div>
-    
-
    <label>Numero de Reserva: </label>
    <input type="text" [(ngModel)]="r1.idReserva" placeholder="Escriba su nombre">
    <br>
@@ -13,11 +11,15 @@
    <input type="text" [(ngModel)]="r1.fechaSalida">
    <br>
    <label>Precio :</label>
-   <input type="text" [(ngModel)]="r1.precio">
+   <input type="text" [(ngModel)]="r1.precioR">
+   <br>
+   <label>ID Mascota :</label>
+   <input type="text" [(ngModel)]="r1.idMascota">
+   <br>
+   <label>Cantidad por Noches:</label>
+   <input type="text" [(ngModel)]="r1.cantidadNoches">
    <br>
    <label>Numero de Habitacion :</label>
    <input type="text" [(ngModel)]="r1.idHabitacion">
    <br>
-   <label>tipo de Habitacion :</label>
-   <input type="text" [(ngModel)]="r1.tipoHabitacion">
    <button (click)="altaReserva()">Dar de alta</button>

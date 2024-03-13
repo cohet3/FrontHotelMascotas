@@ -13,13 +13,19 @@ import { ReservaService } from '../_servicio/reserva.service';
 })
 export class AltaReservaComponent {
   r1: Reserva={
-    "idReserva":0,
-    "fechaEntrada": new Date('2024-02-29'),
-    "fechaSalida":new Date('2024-03-29'),
-    "precio":0,
-    "idHabitacion":0,
-    "tipoHabitacion":"",
+    idReserva:0,
+    fechaEntrada: new Date('2024-02-29'),
+    fechaSalida:new Date('2024-03-29'),
+    precioR:0,
+    idMascota:0,
+    cantidadNoches:0,
+    idHabitacion:0,
+    disponible:""
   }
+    
+
+    
+  
 
     constructor(private servicio:ReservaService,
       private route: ActivatedRoute,
