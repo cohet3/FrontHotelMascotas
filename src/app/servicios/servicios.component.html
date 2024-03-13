@@ -1,10 +1,15 @@
 <h1>Servicios disponibles</h1>
 <div class="servicios-grid">
-    <div *ngFor="let servicio of servicios; trackBy: trackByFn" class="servicio-card">
+    <div class="servicio-card">
+      @for(servicio of servicios; track $index){
       <img src="{{ servicio.imagen }}" alt="{{ servicio.concepto }}">
       <h3>{{ servicio.concepto }}</h3>
       <p>{{ servicio.descripcion }}</p>
       <p>Precio: {{ servicio.precio }} €</p>
+      <p>Cantidad: <input type="number" [(ngModel)]="servicio.cantidad" /></p>
+      <button class="btn btn-success" (click)="anadirServicio(servicio)">Añadir servicio</button>
+      //dar de lata anadirServicio() en detalle de factura para que recoja el servicio y cantidad.
+    }
     </div>
   </div>
 
