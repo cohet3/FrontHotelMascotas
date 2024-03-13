@@ -19,17 +19,17 @@ export class ReservaHabitacionComponent implements OnInit{
   fechaSalida: string = "";
   resultados: Reserva[] = [];
   ngOnInit() {
-    // this.resultados = [];
-    // this.servicio.getReservas(this.fechaEntrada,this.fechaSalida).subscribe(datos=>this.servicio=datos)
-    // console.log(this.resultados)
-    // console.log(this.servicio)
+     this.resultados = [];
+     this.servicio.getReservas(this.fechaEntrada,this.fechaSalida).subscribe(data=>this.servicio=datos)
+     console.log(this.resultados)
+     console.log(this.servicio)
     
   }
-  constructor(private servicio: ReservaService,private router: Router){}
-  // ngOnInit(): void {
-  //   this.servicio.getReservas(this.fechaEntrada,this.fechaSalida).subscribe(datos=>this.servicio=datos);
+  //constructor(private servicio: ReservaService,private router: Router){}
+   //ngOnInit(): void {
+    //this.servicio.getReservas(this.fechaEntrada,this.fechaSalida).subscribe(datos=>this.servicio=datos);
    
-  // }
+   }
   redirecionar() {
     this.router.navigate(['alta-mascota']);
     
@@ -54,4 +54,3 @@ buscarDisponibilidad() {
     );
 }
 
-}

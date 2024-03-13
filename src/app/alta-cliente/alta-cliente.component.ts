@@ -13,11 +13,14 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './alta-cliente.component.css'
 })
 export class AltaClienteComponent {
-  c1:Cliente={
+  c1={
     "idCliente": 0,
     "nombre": "",
     "direccion": "",
-    "telefono": ""}  
+    "telefono": "",
+    "facturas":[],
+    "mascotas":[],
+  }  
     constructor(private servicio:ClienteService,
       private route: ActivatedRoute,
       private router: Router){}
