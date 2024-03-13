@@ -19,9 +19,9 @@ import { HttpClient } from "@angular/common/http";
     }
   
     constructor(private http:HttpClient) {}
-    buscarFecha(f1: string, f2: string){
-      return this.http.get<Reserva[]>(`http://localhost:8080/reservas/$(f1)/$(f2)`);
-    }
+    // buscarFecha(f1: string, f2: string){
+    //   return this.http.get<Reserva[]>(`http://localhost:8080/reservas/$(f1)/$(f2)`);
+    // }
 
     // consultarDisponibilidad(fechaEntrada: Date, fechaSalida: Date): Observable<any> {
     //   const params = new URLSearchParams();
