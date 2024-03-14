@@ -38,6 +38,9 @@ export class AltaReservaComponent {
     {this.servicio.reservaCambio.next(data)})})
     this.router.navigate([''])
   }
+  redirecionarReserva() {
+    this.router.navigate(['alta-reserva']);  
+  }
 }
 
   

@@ -31,7 +31,8 @@ facturas: []
     {console.log("se dio de alta");
     this.servicio.listar().subscribe(data =>
     {this.servicio.clienteCambio.next(data)})})
-    this.router.navigate([''])
+    this.router.navigate(['alta-mascota'])
   }
+
   
 }

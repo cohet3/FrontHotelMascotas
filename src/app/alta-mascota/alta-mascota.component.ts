@@ -34,7 +34,7 @@ export class AltaMascotaComponent {
       this.servicio.alta(this.m1).subscribe(()=>console.log("se ha dado de alta"));
       this.servicio.listar().subscribe(data =>
         {this.servicio.mascotaCambio.next(data)});
-      this.router.navigate(['']);
+      this.router.navigate(['alta-reserva']);
 
 
 
