@@ -1,17 +1,29 @@
 body{
     background-color: #EAECCC;
+ 
 }
+h1{
+text-align: center; 
+font-family:  Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+color: brown;
+ }
+ p{
+  text-align: center;
+ }
+ h2{
+  text-align: center;
+ }
+ li{
+  
+ }
 img {
-    width: 50%; /* Reduce el ancho de la imagen al 50% */
+    width: 50%; 
+    margin: 0 auto;
   }
+
+ 
   h1 {
-    text-align: center;
-  }
-  h1 {
-    font-family:  Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Cambia la fuente del título a Arial */
-  }
-  h1 {
-    color: brown; /* Cambia el color del título a negro */
+    color: brown; 
   }
   img {
     transition: transform 0.5s ease-in-out;
@@ -26,10 +38,10 @@ img {
   }
   
   img {
-    margin-left: 10px;
+    margin-left: 350px;
   }
   img {
-    filter: sharpen(55 px); /* Ajusta el valor según el efecto deseado */
+    filter: sharpen(200 px); 
   }
   img {
     image-rendering: optimize-contrast;

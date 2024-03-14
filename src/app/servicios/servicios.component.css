@@ -1,3 +1,6 @@
+body{
+  background-color: #DBCC95;
+}
 .servicios-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
