@@ -47,16 +47,16 @@ redirecionar3(){
  this.router.navigate(['alta-reserva']);
 }
 
-//buscarDisponibilidad() {
-  //this.servicio.buscarFecha(this.fechaEntrada, this.fechaSalida)
-    //.//subscribe(
-     // (data) => {
-       // this.resultados = data;
-      //},
-      //(error) => {
-       // console.log(error);
-      //}
-    //);
-//}
+buscarDisponibilidad() {
+  this.servicio.buscarFecha(this.fechaEntrada, this.fechaSalida)
+    .subscribe(
+     (data) => {
+       this.resultados = data;
+      },
+      (error) => {
+       console.log(error);
+      }
+    );
+}
 
 }
