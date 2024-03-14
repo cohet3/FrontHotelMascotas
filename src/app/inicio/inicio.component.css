@@ -1,3 +1,36 @@
 body{
     background-color: #EAECCC;
 }
+img {
+    width: 50%; /* Reduce el ancho de la imagen al 50% */
+  }
+  h1 {
+    text-align: center;
+  }
+  h1 {
+    font-family:  Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Cambia la fuente del título a Arial */
+  }
+  h1 {
+    color: brown; /* Cambia el color del título a negro */
+  }
+  img {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  img:hover {
+    transform: scale(1.2);
+  }
+  div {
+    display: flex;
+    align-items: center;
+  }
+  
+  img {
+    margin-left: 10px;
+  }
+  img {
+    filter: sharpen(55 px); /* Ajusta el valor según el efecto deseado */
+  }
+  img {
+    image-rendering: optimize-contrast;
+  }
