@@ -30,22 +30,22 @@ export class ReservaHabitacionComponent implements OnInit{
     // console.log(this.servicio)
     
   }
-  //constructor(private servicio: ReservaService,private router: Router){}
+  constructor(private servicio: ReservaService,private router: Router){}
    //ngOnInit(): void {
     //this.servicio.getReservas(this.fechaEntrada,this.fechaSalida).subscribe(datos=>this.servicio=datos);
    
-   }
-  //redirecionar() {
-    //this.router.navigate(['alta-mascota']);
+   //}
+  redirecionar() {
+    this.router.navigate(['alta-mascota']);
     
-  //}
- // redirecionar2() {
-  //this.router.navigate(['alta-cliente']);
+  }
+ redirecionar2() {
+  this.router.navigate(['alta-cliente']);
   
-//}
-//redirecionar3(){
- // this.router.navigate(['alta-reserva']);
-//}
+}
+redirecionar3(){
+ this.router.navigate(['alta-reserva']);
+}
 
 //buscarDisponibilidad() {
   //this.servicio.buscarFecha(this.fechaEntrada, this.fechaSalida)
@@ -59,3 +59,4 @@ export class ReservaHabitacionComponent implements OnInit{
     //);
 //}
 
+}
