@@ -36,7 +36,7 @@ export class AltaReservaComponent {
     {console.log("se dio de alta");
     this.servicio.listar().subscribe(data =>
     {this.servicio.reservaCambio.next(data)})})
-    this.router.navigate([''])
+    this.router.navigate(['servicios'])
   }
   redirecionarReserva() {
     this.router.navigate(['alta-reserva']);  
