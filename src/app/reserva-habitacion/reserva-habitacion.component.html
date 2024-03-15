@@ -1,5 +1,5 @@
 <body>
-<h1>Realizar reserva</h1>
+<h1>Consulta la disponibilidad de un rango de fechas</h1>
 <div>
   <input matInput type="date" [(ngModel)]="fechaEntrada" placeholder="Fecha de entrada">
   <input matInput type="date" [(ngModel)]="fechaSalida" placeholder="Fecha de salida">
@@ -7,16 +7,15 @@
   <!-- <button type="submit" (click)="buscarDisponibilidad()">Consultar disponibilidad de fecha</button> -->
 
   <div>
-    <!-- @for(let resultado of resultados){ -->
-    <!-- <p>{{ resultado.fechaEntrada }}</p> -->
-    <!-- <p>{{ resultado.disponible ? 'Disponible' : 'No disponible' }}</p> -->
-    <!-- <p>{{ resultado.precioR }}</p>  -->
-    <!-- } -->
-   <!-- </div>  -->  
+    <ul>
+      <li *ngFor="let reserva of reservas">        
+        {{ reserva.fechaEntrada }} - {{ reserva.fechaSalida }}
+      </li>
+    </ul>
 
 </div>
 
-  <button type="submit" (click)="ngOnInit()">Consultar disponibilidad de fecha</button>
+  <button type="submit" (click)="buscarReservas()">Consultar disponibilidad de fecha</button>
 </div>
 <br> 
 <a (click)="redirecionar2()">

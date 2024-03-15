@@ -1,10 +1,10 @@
 export interface Reserva{
-disponible: any;
-    "idReserva": number,
+        "idReserva": number,
         "fechaEntrada": Date,
         "fechaSalida": Date,
         "precioR": number,
         "idMascota": number,
-        "cantidadNoches": number,
-        "idHabitacion": number
+        "idHabitacion": number,
+        "cantidadNoches": number     
 }
+

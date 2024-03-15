@@ -19,23 +19,14 @@ import { HttpClient } from "@angular/common/http";
     }
   
     constructor(private http:HttpClient) {}
-    //buscarFecha(f1: string, f2: string){
-     // return this.http.get<Reserva[]>(`http://localhost:8080/reservas/$(f1)/$(f2)`);
-   // }
 
-    // consultarDisponibilidad(fechaEntrada: Date, fechaSalida: Date): Observable<any> {
-    //   const params = new URLSearchParams();
-    //   params.append('fechaEntrada', fechaEntrada.toISOString());
-    //   params.append('fechaSalida', fechaSalida.toISOString());
-    
-    //   let urlConParametros = this.url.replace('{fechaEntrada}', fechaEntrada.toISOString());
-    //   urlConParametros = urlConParametros.replace('{fechaSalida}', fechaSalida.toISOString());
-    
-    //   return this.http.get(urlConParametros + '?' + params.toString());
-    // }
-    buscarFecha(fechaEntrada: string, fechaSalida: string): Observable<Reserva[]> {
+    buscarFecha(fechaEntrada: Date, fechaSalida: Date): Observable<Reserva[]> {
       const url = `http://localhost:8080/reservas/${fechaEntrada}/${fechaSalida}`;
+      console.log(url)
+      console.log("realiza la llamada?",fechaEntrada)
+      console.log("realiza la llamada?",fechaSalida)
       return this.http.get<Reserva[]>(url);
+      
     }
 
     

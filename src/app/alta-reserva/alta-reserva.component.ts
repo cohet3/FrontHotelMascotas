@@ -20,7 +20,7 @@ export class AltaReservaComponent {
     idMascota:0,
     cantidadNoches:0,
     idHabitacion:0,
-    disponible:""
+   // disponible:""
   }
     
 

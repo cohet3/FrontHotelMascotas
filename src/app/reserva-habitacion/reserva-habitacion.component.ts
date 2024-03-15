@@ -15,14 +15,24 @@ import { Reserva } from '../_modelo/reserva';
   styleUrl: './reserva-habitacion.component.css'
 })
 export class ReservaHabitacionComponent implements OnInit{
-  
-  fechaEntrada: string = "";
-  fechaSalida: string = "";
-        "precioR": number=0;
-        "idMascota": number=0;
-        "cantidadNoches": number=0;
-        "idHabitacion": number=0;
-  resultados: Reserva[] = [];
+  reserva: Reserva={
+        "idReserva":1,
+        "fechaEntrada": new Date(2024,3,15),
+        "fechaSalida": new Date(2024,3,16),
+        "precioR": 0,
+        "idMascota": 0,        
+        "idHabitacion": 0,
+        "cantidadNoches": 0,}
+  reservas: Reserva[] = [];
+  fechaEntrada!: Date;
+  fechaSalida!: Date;
+  buscarReservas() {
+    console.log(this.fechaEntrada)
+    this.reservaService.buscarFecha(this.fechaEntrada, this.fechaSalida).subscribe(
+      (reservas) => this.reservas = reservas
+    );
+    console.log(this.reservas)
+  }
   ngOnInit() {
     // this.resultados = [];
     // this.servicio.getReservas(this.fechaEntrada,this.fechaSalida).subscribe(datos=>this.servicio=datos)
@@ -30,11 +40,7 @@ export class ReservaHabitacionComponent implements OnInit{
     // console.log(this.servicio)
     
   }
-  constructor(private servicio: ReservaService,private router: Router){}
-   //ngOnInit(): void {
-    //this.servicio.getReservas(this.fechaEntrada,this.fechaSalida).subscribe(datos=>this.servicio=datos);
-   
-   //}
+  constructor(private reservaService: ReservaService,private router: Router){}
   redirecionar() {
     this.router.navigate(['alta-mascota']);
     
@@ -47,16 +53,5 @@ redirecionar3(){
  this.router.navigate(['alta-reserva']);
 }
 
-buscarDisponibilidad() {
-  this.servicio.buscarFecha(this.fechaEntrada, this.fechaSalida)
-    .subscribe(
-     (data) => {
-       this.resultados = data;
-      },
-      (error) => {
-       console.log(error);
-      }
-    );
-}
 
 }
