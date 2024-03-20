@@ -22,12 +22,6 @@ import { HttpClient } from "@angular/common/http";
 
     buscarFecha(fechaEntrada: Date, fechaSalida: Date): Observable<Reserva[]> {
       const url = `http://localhost:8080/reservas/${fechaEntrada}/${fechaSalida}`;
-      console.log(url)
-      console.log("realiza la llamada?",fechaEntrada)
-      console.log("realiza la llamada?",fechaSalida)
-      return this.http.get<Reserva[]>(url);
-      
-    }
-
-    
+      return this.http.get<Reserva[]>(url) 
+    }  
   }

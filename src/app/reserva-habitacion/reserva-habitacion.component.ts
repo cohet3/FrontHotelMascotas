@@ -6,6 +6,7 @@ import { Servicio } from '../_modelo/servicio';
 import { ReservaService } from '../_servicio/reserva.service';
 import { CommonModule } from '@angular/common';
 import { Reserva } from '../_modelo/reserva';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-reserva-habitacion',
@@ -26,19 +27,10 @@ export class ReservaHabitacionComponent implements OnInit{
   reservas: Reserva[] = [];
   fechaEntrada!: Date;
   fechaSalida!: Date;
-  buscarReservas() {
-    console.log(this.fechaEntrada)
-    this.reservaService.buscarFecha(this.fechaEntrada, this.fechaSalida).subscribe(
-      (reservas) => this.reservas = reservas
-    );
-    console.log(this.reservas)
-  }
-  ngOnInit() {
-    // this.resultados = [];
-    // this.servicio.getReservas(this.fechaEntrada,this.fechaSalida).subscribe(datos=>this.servicio=datos)
-    // console.log(this.resultados)
-    // console.log(this.servicio)
-    
+  numeroHabitaciones: number = 2;
+  disponible: boolean = false;
+
+  ngOnInit() { 
   }
   constructor(private reservaService: ReservaService,private router: Router){}
   redirecionar() {
@@ -51,6 +43,25 @@ export class ReservaHabitacionComponent implements OnInit{
 }
 redirecionar3(){
  this.router.navigate(['alta-reserva']);
+}
+buscarReservas() {
+  this.reservaService.buscarFecha(this.fechaEntrada, this.fechaSalida).subscribe(
+    (reservas) => this.reservas = reservas
+  );
+  if( this.reservas.length >= this.numeroHabitaciones){
+    this.disponible = false;
+    console.log(this.reservas.length)
+    console.log("no quedan habitaciones libres en la fecha solicitada")
+  }else{
+    
+    console.log("sí quedan habitaciones libres en la fecha solicitada")
+    console.log(this.reservas.length+1)
+    this.disponible = true;
+   // this.redirecionar3();
+  }
+}
+getDisponibilidadTexto(): string {
+  return this.disponible ? 'Disponible' : 'No disponible';
 }
 
 
