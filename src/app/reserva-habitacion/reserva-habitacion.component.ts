@@ -29,10 +29,28 @@ export class ReservaHabitacionComponent implements OnInit{
   fechaSalida!: Date;
   numeroHabitaciones: number = 2;
   disponible: boolean = false;
+  //handler Date input minDate
+  fechaActual: Date = new Date(); 
+  fechaFormateada = this.formatearFecha(this.fechaActual);
 
+  
   ngOnInit() { 
+    console.log(this.fechaActual.toLocaleDateString())
+    console.log(this.fechaFormateada)
+    if (Boolean(this.fechaEntrada?.valueOf) && Boolean(this.fechaSalida?.valueOf)) {
+      this.buscarReservas();
+    }
+
   }
   constructor(private reservaService: ReservaService,private router: Router){}
+  formatearFecha(fecha: Date): string {
+    const mes = fecha.getMonth() + 1;
+    const dia = fecha.getDate();
+    const año = fecha.getFullYear();
+    return `${año}-${mes.toString().padStart(2, '0')}-${dia.toString().padStart(2, '0')}`;
+  }
+
+  
   redirecionar() {
     this.router.navigate(['alta-mascota']);
     
