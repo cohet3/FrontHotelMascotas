@@ -18,8 +18,8 @@ import { Observable, of } from 'rxjs';
 export class ReservaHabitacionComponent implements OnInit{
   reserva: Reserva={
         "idReserva":1,
-        "fechaEntrada": new Date(2024,3,15),
-        "fechaSalida": new Date(2024,3,16),
+        "fechaEntrada": new Date(2024,0o3,15),
+        "fechaSalida": new Date(2024,0o3,16),
         "precioR": 0,
         "idMascota": 0,        
         "idHabitacion": 0,
@@ -32,24 +32,37 @@ export class ReservaHabitacionComponent implements OnInit{
   //handler Date input minDate
   fechaActual: Date = new Date(); 
   fechaFormateada = this.formatearFecha(this.fechaActual);
+  private _variablesActualizadas: boolean= false;
+  isLoading = false;  // Flag for loading state
 
   
   ngOnInit() { 
     console.log(this.fechaActual.toLocaleDateString())
     console.log(this.fechaFormateada)
-    if (Boolean(this.fechaEntrada?.valueOf) && Boolean(this.fechaSalida?.valueOf)) {
-      this.buscarReservas();
-    }
+    this.fechaEntrada = new Date(); // Or set based on your logic
+    this.fechaSalida = new Date(); // Or set based on your logic
 
+    if (this.fechaEntrada && this.fechaSalida) {
+      this._variablesActualizadas = true;
+    } else {
+      this._variablesActualizadas = false;
+    }
+  }
+  onFechaSalidaChange(): void {
+    if (this.fechaEntrada?.valueOf() && this.fechaSalida?.valueOf()) {
+      this._variablesActualizadas = true;
+    } else {
+      this._variablesActualizadas = false;
+    }
   }
   constructor(private reservaService: ReservaService,private router: Router){}
+
   formatearFecha(fecha: Date): string {
     const mes = fecha.getMonth() + 1;
     const dia = fecha.getDate();
     const año = fecha.getFullYear();
     return `${año}-${mes.toString().padStart(2, '0')}-${dia.toString().padStart(2, '0')}`;
   }
-
   
   redirecionar() {
     this.router.navigate(['alta-mascota']);
@@ -63,20 +76,21 @@ redirecionar3(){
  this.router.navigate(['alta-reserva']);
 }
 buscarReservas() {
-  this.reservaService.buscarFecha(this.fechaEntrada, this.fechaSalida).subscribe(
-    (reservas) => this.reservas = reservas
-  );
-  if( this.reservas.length >= this.numeroHabitaciones){
-    this.disponible = false;
-    console.log(this.reservas.length)
-    console.log("no quedan habitaciones libres en la fecha solicitada")
-  }else{
-    
-    console.log("sí quedan habitaciones libres en la fecha solicitada")
-    console.log(this.reservas.length+1)
-    this.disponible = true;
-   // this.redirecionar3();
-  }
+  this.isLoading = true; // Set loading state to true
+  this.disponible = false; // Reset availability before request
+
+  this.reservaService.buscarFecha(this.fechaEntrada, this.fechaSalida)
+    .subscribe(
+      (reservas) => {
+        this.reservas = reservas;
+        this.disponible = reservas.length < this.numeroHabitaciones;
+        this.isLoading = false; // Set loading state to false after response
+      },
+      (error) => {
+        console.error("Error fetching reservations:", error);
+        this.isLoading = false; // Set loading state to false on error
+      }
+    );
 }
 getDisponibilidadTexto(): string {
   return this.disponible ? 'Disponible' : 'No disponible';

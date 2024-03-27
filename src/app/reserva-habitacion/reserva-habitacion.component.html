@@ -3,20 +3,22 @@
 <div>
   <label for=""> Fecha llegada: </label>
   <input matInput type="date" 
-  min="{{fechaFormateada}}" 
+   min=""
   [(ngModel)]="fechaEntrada" 
   placeholder="Fecha de entrada"
   required="required"
   >
   <label for=""> Fecha salida : </label>
   <input matInput type="date" 
+   
   [(ngModel)]="fechaSalida" 
-  placeholder="Fecha de salida"
+  placeholder="{{fechaFormateada}}"
   required="required"
   >
 
   <button type="submit"
   *ngIf="fechaEntrada && fechaSalida"
+  [disabled]="isLoading"
   (click)="buscarReservas()">Consultar disponibilidad de fecha</button>
 </div>
 <div>
@@ -35,6 +37,4 @@
     <button class="button button2">Alta Mascota</button>
   </a>
    <br>
- 
- 
   </body>
