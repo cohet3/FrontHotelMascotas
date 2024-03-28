@@ -75,7 +75,7 @@ export class ReservaHabitacionComponent implements OnInit{
   
 }
 redirecionar3(){
- this.router.navigate(['alta-reserva']);
+ this.router.navigate(['alta-reserva', this.fechaEntrada, this.fechaSalida]);
 }
 buscarReservas() {
   this.isLoading = true; // Set loading state to true
@@ -93,14 +93,14 @@ buscarReservas() {
         this.isLoading = false; // Set loading state to false on error
       }
     );
-    if (!this.disponible) {
-      this.router.navigate(['/alta-reserva', this.fechaEntrada, this.fechaSalida]);
+    // if (this.disponible) {
+    //   this.router.navigate(['/alta-reserva', this.fechaEntrada, this.fechaSalida]);
     //  console.log(this.fechaEntrada)
     //  console.log(this.fechaSalida)
-    } else {
-      // Handle case where no rooms are available
-      console.log("hola"+this.fechaSalida)
-    }
+    // } else {
+    //   // Handle case where no rooms are available
+    //   console.log("hola"+this.fechaSalida)
+    // }
 }
 getDisponibilidadTexto(): string {
   return this.disponible ? 'Disponible' : 'No disponible';
