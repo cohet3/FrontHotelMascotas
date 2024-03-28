@@ -2,27 +2,33 @@
 <h1>Genial hay habitación disponible en el rango de fechas seleccionado</h1>
 
 <div class="formulario-alta">
-   <label>Numero de Reserva: </label>
+   <!-- <label>Numero de Reserva: </label>
    <input type="text" [(ngModel)]="r1.idReserva" placeholder="Escriba su nombre">
-   <br>
+   <br> -->
    <label>Fecha de Entrada :</label>
-   <input type="text" [(ngModel)]="r1.fechaEntrada">
+   <input type="date" [(ngModel)]="fechaEntrada" placeholder="{{fechaEntrada}}"
+   disabled="true">
    <br>
    <label>Fecha de Salida:</label>
-   <input type="text" [(ngModel)]="r1.fechaSalida">
+   <input type="date" [(ngModel)]="fechaSalida"
+   disabled="true">
    <br>
    <label>Precio :</label>
-   <input type="text" [(ngModel)]="r1.precioR">
+   <input type="text" [(ngModel)]="r1.precioR"
+   disabled="true">
    <br>
    <label>ID Mascota :</label>
-   <input type="text" [(ngModel)]="r1.idMascota">
+   <input type="text" [(ngModel)]="r1.idMascota"
+   disabled="true">
    <br>
-   <label>Cantidad por Noches:</label>
-   <input type="text" [(ngModel)]="r1.cantidadNoches">
+   <label>Cantidad de Noches:</label>
+   <input type="text" [(ngModel)]="r1.cantidadNoches"
+   disabled="true">
    <br>
-   <label>Numero de Habitacion :</label>
-   <input type="text" [(ngModel)]="r1.idHabitacion">
+   <label>Numero de Habitacion asignada:</label>
+   <input type="text" [(ngModel)]="r1.idHabitacion"
+   disabled="true">
    <br>
-   <button (click)="altaReserva()">Dar de alta</button>
+   <button (click)="altaReserva()">Confirmar Reserva</button>
 </div>
 </body>

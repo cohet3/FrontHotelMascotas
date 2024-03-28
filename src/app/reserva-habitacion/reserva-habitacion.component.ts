@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { Router } from '@angular/router';
@@ -27,20 +27,22 @@ export class ReservaHabitacionComponent implements OnInit{
   reservas: Reserva[] = [];
   fechaEntrada!: Date;
   fechaSalida!: Date;
-  numeroHabitaciones: number = 2;
+  numeroHabitaciones: number = 10;
   disponible: boolean = false;
   //handler Date input minDate
   fechaActual: Date = new Date(); 
   fechaFormateada = this.formatearFecha(this.fechaActual);
   private _variablesActualizadas: boolean= false;
   isLoading = false;  // Flag for loading state
+ 
 
   
   ngOnInit() { 
-    console.log(this.fechaActual.toLocaleDateString())
-    console.log(this.fechaFormateada)
+    //console.log(this.fechaActual.toLocaleDateString())
+   // console.log(this.fechaFormateada)
     this.fechaEntrada = new Date(); // Or set based on your logic
     this.fechaSalida = new Date(); // Or set based on your logic
+    
 
     if (this.fechaEntrada && this.fechaSalida) {
       this._variablesActualizadas = true;
@@ -91,6 +93,14 @@ buscarReservas() {
         this.isLoading = false; // Set loading state to false on error
       }
     );
+    if (!this.disponible) {
+      this.router.navigate(['/alta-reserva', this.fechaEntrada, this.fechaSalida]);
+    //  console.log(this.fechaEntrada)
+    //  console.log(this.fechaSalida)
+    } else {
+      // Handle case where no rooms are available
+      console.log("hola"+this.fechaSalida)
+    }
 }
 getDisponibilidadTexto(): string {
   return this.disponible ? 'Disponible' : 'No disponible';

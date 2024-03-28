@@ -3,14 +3,14 @@
 <div>
   <label for=""> Fecha llegada: </label>
   <input matInput type="date" 
-   min=""
+  min="{{fechaFormateada}}"
   [(ngModel)]="fechaEntrada" 
   placeholder="Fecha de entrada"
   required="required"
   >
   <label for=""> Fecha salida : </label>
   <input matInput type="date" 
-   
+  min="{{fechaFormateada}}" 
   [(ngModel)]="fechaSalida" 
   placeholder="{{fechaFormateada}}"
   required="required"

@@ -20,6 +20,7 @@ export const routes: Routes = [
     {path:"alta-mascota",component:AltaMascotaComponent},
     {path:"alta-cliente",component:AltaClienteComponent},
     {path:"alta-reserva",component:AltaReservaComponent},
+    {path: 'alta-reserva/:fechaEntrada/:fechaSalida', component: AltaReservaComponent },
     {path:"factura",component:FacturaComponent},
     {path:"detalle-factura",component:DetalleFacturaComponent},
     {path:"cliente", component:ClienteComponent},
